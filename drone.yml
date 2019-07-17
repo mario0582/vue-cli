@@ -8,6 +8,7 @@ steps:
   - name: cache
     path: /tmp/cache
   commands:
+  - drone exec
   - npm install
   - npm test
 
