@@ -2,17 +2,9 @@ kind: pipeline
 name: default
 
 steps:
-- name: build
+- name: test
   image: node
-  volumes:
-  - name: cache
-    path: /tmp/cache
   commands:
   - drone exec
   - npm install
   - npm test
-
-volumes:
-- name: cache
-  host:
-    path: /var/lib/cache
